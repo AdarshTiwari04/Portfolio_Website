@@ -1,0 +1,428 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+li
+{
+  list-style: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: font-size 0.15s ease;
+}
+
+li:hover
+{
+  font-size: 1.12em;
+}
+
+li:active
+{
+  font-size: 1.04em;
+}
+
+a
+{
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  transition: color 0.15s , text-decoration 0.15s;
+}
+
+a:hover
+{
+  color: rgb(9, 101, 206);
+}
+
+.navbar
+{
+  width: 100%;
+  height: 80px;
+  max-width: 1450px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a
+{
+  font-size: 2em;
+  font-weight: 700;
+  transition: 1s ease;
+}
+
+.navbar .Links 
+{
+  display: flex;
+  gap: 60px;
+  margin-right: 50px;
+  transition: 1s ease;
+}
+
+.navbar .toggle_btn
+{
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
+  margin-right: 8px;
+}
+
+/* DROP-DOWN MENU */
+
+.dropdown-menu
+{
+  display: none;
+  position: absolute;
+  right: 55px;
+  top: 75px;
+  height: 0;
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open
+{
+  height: 210px;
+  transition: .5s ease;
+  border: 1px solid white;
+}
+
+.dropdown-menu li 
+{
+  padding: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 992px)
+{
+  .navbar .Links
+  {
+    display: none;
+  }
+
+  .navbar .toggle_btn
+  {
+    display: block;
+  }
+
+  .dropdown-menu
+  {
+    display: block;
+  }
+}
+
+body {
+  background: rgb(8, 27, 41);
+  color: rgb(237, 237, 237);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 86%;
+  padding: 20px 6%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  position: relative;
+  font-size: 25px;
+  color: rgb(237, 237, 237);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(8, 27, 41);
+  animation: showRight 1s ease forwards;
+  animation-delay: .4s;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: rgb(237, 237, 237);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 12px;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: rgb(0, 171, 240);
+}
+
+.Home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 7%;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  position: relative;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-content h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(8, 27, 41);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.home-content h3 {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  color: rgb(0, 171, 240);
+}
+
+.home-content h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(8, 27, 41);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
+.home-content p {
+  position: relative;
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.home-content p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 105%;
+  height: 100%;
+  background: rgb(8, 27, 41);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.home-content .btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+
+.home-content .btn-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(8, 27, 41);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.9s;
+  z-index: 2;
+}
+
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 94%;
+  background: rgb(0, 171, 240);
+  border: 2px solid rgb(0, 171, 240);
+  border-radius: 8px;
+  font-size: 19px;
+  color: rgb(8, 27, 41);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.btn-box a:hover {
+  color: rgb(0, 171, 240);
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: rgb(0, 171, 240);
+}
+
+.btn-box a:nth-child(2):hover {
+  color: rgb(8, 27, 41);
+}
+
+.btn-box a:nth-child(2)::before {
+  background: rgb(0, 171, 240);
+}
+
+.btn-box a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(8, 27, 41);
+  z-index: -1;
+  transition: .5s;
+}
+
+.btn-box a:hover::before {
+  width: 100%;
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(8, 27, 41);
+  animation: showRight 1s ease forwards;
+  animation-delay: 2.5s;
+  z-index: 2;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid rgb(0, 171, 240);
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgb(0, 171, 240);
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.home-sci a:hover {
+  color: rgb(8, 27, 41);
+}
+
+.home-sci a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(0, 171, 240);
+  z-index: -1;
+  transition: .5s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+.image {
+  width: 650px;
+  position: absolute;
+  top: -520px;
+  left: 680px;
+}
+
+.home-imgHover {
+  position: absolute;
+  top: 140px;
+  right: 70px;
+  width: 610px;
+  height: 60%;
+  background: transparent;
+  transition: 3s;
+  animation: manipActiveHover .1s forwards;
+  animation-delay: 4s;
+  pointer-events: none;
+}
+
+.home-imgHover:hover {
+  background: rgb(8, 27, 41);
+  opacity: 0.7;
+}
+
+.home-imgHover::after {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: 0;
+  width: 115%;
+  height: 130%;
+  background: rgb(8, 27, 41);
+  animation: showRight 1s ease forwards;
+  animation-delay: 3s;
+  z-index: 100;
+}
+
+/* KeyFrames Animation */
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes manipActiveHover
+{
+  100%
+  {
+    pointer-events: auto;
+  }
+}
